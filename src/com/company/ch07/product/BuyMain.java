@@ -10,5 +10,6 @@ public class BuyMain {
         buyer.buyProduct(tv);
         buyer.buyProduct(car);
         buyer.buyProduct(computer);
+        buyer.summary();
     }
 }
