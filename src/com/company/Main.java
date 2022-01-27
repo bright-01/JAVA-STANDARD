@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.ch06.Tv;
+import com.company.ch06_Basic.Tv;
 
 import java.util.Arrays;
 
