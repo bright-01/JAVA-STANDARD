@@ -7,7 +7,6 @@ package com.company.ch08_Exception;
  * 2.키워드 throw를 이용해서 예외를 발생
  * thorw e;
  *
- *
  * checked 예외 - 컴파일러가 예외 처리 여부를 체크 ( 예외 처리 필수 )
  * unchecked 예외 - 컴파일러가 예외 처리 여부를 체크 안함 ( 예외 처리 선택 )
  *
