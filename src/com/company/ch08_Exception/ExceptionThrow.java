@@ -12,7 +12,7 @@ package com.company.ch08_Exception;
  *
  */
 public class ExceptionThrow {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception { // 자바 jvm에 넘겨버림, 프로그램 비정상 종료 --> 넘기기만 하지말고 한곳은 반드시 try catch로 처리 해야한다.
         try {
             Exception e = new Exception("고의로 발생"); // 예외 객체를 생성하고
             throw e;  // 예외를 발생 시킴 -> catch로 던짐
@@ -24,8 +24,14 @@ public class ExceptionThrow {
             e.printStackTrace();
         }
         System.out.println("프로그램 종료");
+        throwTest();
     }
 
 //    throw new Exception(); // checked 예외 컴파일러가 발생 시킴 --> try catch로 예외를 처리 해줘야 한다.
+
+
+    public static void throwTest() throws Exception {
+
+    }
 
 }
