@@ -10,6 +10,8 @@ public class ExceptionThrow2 {
             System.out.println("파일이 성공적으로 완성 되었습니다.");
         }catch (Exception e){
             System.out.println(e.getMessage()+ " 다시 만들어줘/");
+        } finally {
+            System.out.println("무조건 실행된다");
         }
 
 
