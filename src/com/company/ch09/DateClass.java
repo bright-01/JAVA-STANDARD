@@ -101,6 +101,14 @@ public class DateClass {
         dt.clear(); // 항상 초기화 하고 클리어를 하고 set으로 날짜를 세팅해야한다!!
         System.out.println(dt.getTimeInMillis());; // 1970년1월1일 00:00:00이 들어감
 
+        // add -- add는 다른 필드의 영향을 준다. 2020, 12, 31 에 +1일을 하면 2021, 1, 1 이 되지만
+        dt.set(2020, 7, 31);
+        dt.add(Calendar.DATE, 1);
+        dt.add(Calendar.MONTH, -8);
+
+        //roll -- 다른 필드에 영향을 주지 않는다, 2020, 12, 1이 된다.
+        dt.roll(Calendar.DATE, 1);
+        dt.roll(Calendar.MONTH, 1);
 
 
 
