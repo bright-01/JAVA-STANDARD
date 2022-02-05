@@ -11,6 +11,13 @@ public class StringBufferTest {
      *
      * StringBuffer은 equals()가 오버라이딩 되어 있지 않다 ( 그래서 주소비교함)
      * ==> String으로 변환 후 equals로 비교 해야한다.
+     *
+     *
+     * ****
+     * StringBuilder
+     * - StringBuffer는 동기화 되어있다. 멀티 쓰레드에서 안전
+     * - 멀티쓰레드 프로그램이 아닌경우, 동기화는 불필요한 성능 저하 => 이럴땐 StringBuffer 대신 StringBuilder를 사용하면 성능이 향상된다.
+     *
      * */
 
     public static void main(String[] args) {
