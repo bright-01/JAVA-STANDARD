@@ -41,7 +41,36 @@ public class DateClass {
         int thisYear = cal.get(Calendar.YEAR); // 올해가 몇년인지 알아낸다.
         int lastDayOfMonth = cal.getActualMaximum(Calendar.DATE); // 이달의 마지막
 
+        //set으로 날짜 지정
+        // 다양한 날짜와 시간을 받는다..
+        cal.set(2019, 4, 15); // 2019년 5월 15일
+
+        //시간지정
+        cal.set(Calendar.HOUR_OF_DAY, 10); // 10시 20분 30초로 지정 하는 방법
+        cal.set(Calendar.MINUTE, 20);
+        cal.set(Calendar.SECOND, 30);
 
 
+        // 날짜 예제
+        // 요일은 1부터 시작하기 때문에 0번째 인덱스를 비워둠
+        final String[] DAY_OF_WEEK = {"", "일", "월", "화", "수", "목", "금", "토"};
+
+        Calendar date1 = Calendar.getInstance();
+        Calendar date2 = Calendar.getInstance();
+
+        // month의 경우 0부터 시작하기 때문에 4월인 경우에는 3으로 지정해야한다.
+        // date1.set(2019, Calendar.APRIL, 29)와 같이 할 수도 있음
+        date1.set(2019, 3, 29); // 2019년 4월 29일로 날짜를 지정
+        System.out.println("date1은 " + toString(date1) + DAY_OF_WEEK[2]+"요일이고,") ;
+        System.out.println("date2"+toString(date2) + DAY_OF_WEEK[date2.get(Calendar.DAY_OF_WEEK)]+"요일이다");
+
+        //날짜 차이를 얻으려면, getTimeInMillis()로 변환해서 구함
+        long difference = (date2.getTimeInMillis()) - (date1.getTimeInMillis())/1000;
+        // 이러면 초가 떨어짐
+        // 일로 계산하려면 difference / (24*69*60 ) 하면됌
+    }
+
+    public static String toString(Calendar date){
+        return date.get(Calendar.YEAR) + "년" + (date.get(Calendar.MONDAY)+1) + "월" + (date.get(Calendar.SECOND)) + "초";
     }
 }
