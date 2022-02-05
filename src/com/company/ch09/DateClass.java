@@ -68,7 +68,43 @@ public class DateClass {
         long difference = (date2.getTimeInMillis()) - (date1.getTimeInMillis())/1000;
         // 이러면 초가 떨어짐
         // 일로 계산하려면 difference / (24*69*60 ) 하면됌
-    }
+
+
+        // 시간
+        final int[] TIME_UNIT = {3600, 60, 1};
+        final String[] TIME_UNIT_NAME={"시간", "분", "초"};
+
+        Calendar time1 = Calendar.getInstance();
+        Calendar time2 = Calendar.getInstance();
+
+        time1.set(Calendar.HOUR_OF_DAY, 10); // time1을 10시 20분 30초로 설정
+        time1.set(Calendar.MINUTE, 30);
+        time1.set(Calendar.SECOND, 10);
+
+        time2.set(Calendar.HOUR_OF_DAY, 20); // time1을 20시 20분 30초로 설정
+        time2.set(Calendar.MINUTE, 30);
+        time2.set(Calendar.SECOND, 10);
+
+        long diff = Math.abs(time2.getTimeInMillis() - time1.getTimeInMillis()) / 1000; // 차이나는 시간이 -수도 있으니까 절대값으로 표시
+        String tmp = "";
+        for(int i = 0; i < TIME_UNIT.length; i++){
+            tmp+= diff/TIME_UNIT[i] + TIME_UNIT_NAME[i];
+            diff %=TIME_UNIT[i];
+        }
+        // tmp에 시분초로 변환한 값이 들어가 있다.
+
+
+        //Clear()
+        Calendar dt = Calendar.getInstance();
+
+        System.out.println(dt.getTimeInMillis());; // 현재값이 들어가지만
+        dt.clear(); // 항상 초기화 하고 클리어를 하고 set으로 날짜를 세팅해야한다!!
+        System.out.println(dt.getTimeInMillis());; // 1970년1월1일 00:00:00이 들어감
+
+
+
+
+   }
 
     public static String toString(Calendar date){
         return date.get(Calendar.YEAR) + "년" + (date.get(Calendar.MONDAY)+1) + "월" + (date.get(Calendar.SECOND)) + "초";
