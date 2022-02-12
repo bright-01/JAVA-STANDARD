@@ -28,5 +28,6 @@ public class ArraysClass {
      *
      *
      * parallelXXX, splitertor, stream - 람다와 관련
+     *
      * */
 }
