@@ -1,4 +1,4 @@
-package com.company.ch12_Generics;
+package com.company.ch12_Generics_Enum_Annotation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
