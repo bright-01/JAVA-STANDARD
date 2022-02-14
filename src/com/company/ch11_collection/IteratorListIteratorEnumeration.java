@@ -28,7 +28,7 @@ public class IteratorListIteratorEnumeration {
     public static void main(String[] args) {
         List list = new ArrayList();
         HashSet list2 = new HashSet(); // 이것도 이터레이터로 쉽게 가져올수 있음
-        Collection list3 = new HashSet(); // 이렇게 하면 다 받을 수 있음
+//        Collection list3 = new HashSet(); // 이렇게 하면 다 받을 수 있음
         list.add(1);
         list.add(2);
         list.add(3);
