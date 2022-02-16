@@ -26,6 +26,16 @@ public class ThreadClass {
      * 입출력시 작업이 중단 되는것
      *
      *
+     *
+     * ***쓰레드의 상태
+     * 1. new 쓰레드가 생성되고 아직 start()가 호출 되지 않은 상태
+     * 2. Runnable 실행 중 또는 실행 가능한 상태
+     * 3. blocked 동기화블럭에 의해서 일시정지된 상태 lock이 풀릴 때까지 기다리는 상태 -->  l/o bloack 입출력 대기
+     * 4. waiting, timed_waiting 쓰레드의 작업이 종료되지는 않았지만, 실행가능하지 않는 unrunnalbe 일시정지상태, timed_waiting은 일시정지시간이 지정된 경우를 의미 ==> suspends()일시정지, sleep()잠자기, wait()기다림, join()다른쓰레드 끝기다림,
+     *    ==> 3, 4이 상태는 일시정지됨
+     *    ==> time-out 시간종료 ( sleep ) / resume() 일시정지 품 (suspend) / notify() - (wait ) /  interrupt 깨우기
+     * 5. terminated 쓰레드의 작업이 종료된 상태
+     *
      * * */
 
 
