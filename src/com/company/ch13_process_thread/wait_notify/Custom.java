@@ -17,7 +17,7 @@ public class Custom implements Runnable{
     @Override
     public void run() {
         while(true){
-            try { Thread.sleep(1000); } catch (InterruptedException e) {}
+            try { Thread.sleep(100); } catch (InterruptedException e) {}
 
             String name = Thread.currentThread().getName();
             if(eatFood()){

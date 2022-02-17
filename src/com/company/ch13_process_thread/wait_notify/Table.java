@@ -11,22 +11,50 @@ public class Table {
 
     public synchronized void add(String dish){
         if(dishes.size() >= MAX_FOOD){
+            String name = Thread.currentThread().getName();
+            System.out.println(name+" is waiting.");
+            try {
+                wait(); // COOK 쓰레드를 기다리게 한다
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             return;
         }
 
         dishes.add(dish);
+        notify(); // 기다리고 있는 손님을 깨운다
         System.out.println("DISHES : " + dishes.toString());
     }
 
     public boolean remove(String dishName){
         synchronized (this){
-            for(int i=0; i<dishes.size(); i++){
-                if(dishName.equals(dishes.get(i))){
-                    dishes.remove(i);
-                    return true;
+            String name = Thread.currentThread().getName();
+            while(dishes.size()  == 0){
+                System.out.println(name + " is waiting.");
+                try {
+                    wait();
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
-            return false;
+            while(true){
+                for(int i=0; i<dishes.size(); i++){
+                    if(dishName.equals(dishes.get(i))){
+                        dishes.remove(i);
+                        notify(); // COOK 꺠워
+                        return true;
+                    }
+                }
+
+                try {
+                    System.out.println(name + " is waiting.");
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
