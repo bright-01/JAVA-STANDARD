@@ -1,4 +1,4 @@
-package com.company.ch13_process_thread;
+package com.company.ch13_process_thread.daemon;
 
 public class DaemonThread implements Runnable{
     /**
