@@ -2,6 +2,8 @@ package com.company.ch14_Lamda_stream.stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamClass {
@@ -67,8 +69,43 @@ public class StreamClass {
         Stream<String> strStream2 = Arrays.stream(new String[]{"1", "2", "3", "4"});
         Integer[] intArr = {1,2,3,4,5};
         Stream<Integer> intStream3 = Arrays.stream(intArr);
-
         strStream.forEach(System.out::print);
+
+        //임의의 수
+        IntStream intStream1 = new Random().ints(); // 무한 스크림
+        intStream1.limit(5).forEach(System.out::println); // 5개의 요소만 출력한다
+        IntStream intStream2 = new Random().ints(5); // 크기가 5인 난수 스트림 반
+
+        IntStream ints = new Random().ints();
+                 ints
+                .limit(5)
+                .forEach(System.out::println);
+
+        IntStream ints2 = new Random().ints(1, 5);
+        IntStream ints3 = IntStream.range(1, 5);
+
+        // 람다식 iterate() , generate()
+//        static <T> Stream<T> iterate(T seed, UnaryOperator<T>f) // 이전 요소에 종속적
+//        static <T> Stream<T> generate(Supplier<T> s)
+//        iterate() 는 이전 요소를 seed로 해서 다음 요소를 계산하낟
+        Stream<Integer> eventStream = Stream.iterate(0, n->n+2);
+        // generate()는 seed를 사용하지 않는다.
+        Stream<Double> randomStream = Stream.generate(Math::random);
+        Stream<Integer> oneStream = Stream.generate(()->1);
+
+        Stream<Integer> integerIterate = Stream.iterate(0, n -> n + 2);
+        integerIterate.limit(10).forEach(System.out::println);
+
+        Stream<Integer>  oneStream2 = Stream.generate(()->1);
+        oneStream2.limit(10).forEach(System.out::println);
+
+        // 파일과 빈 스트림
+        // Stream<Path> Files.list(Path dir) Path는 파일 또는 디렉토리
+
+        // 비어있는 스트림
+        Stream emptyStream = Stream.empty();
+        long count = emptyStream.count();
+
 
 
     }
