@@ -60,6 +60,7 @@ public class StreamMiddleOperator2 {
          Stream<String[]> strArrStream = Stream.of(
                  new String[]{"abc", "def", "jkl"},
                  new String[]{"ABC", "GHI", "JKL"}
+
          );
 
          Stream<String> strStream = strArrStream.flatMap(Arrays::stream);
