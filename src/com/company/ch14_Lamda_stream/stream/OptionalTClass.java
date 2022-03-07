@@ -82,7 +82,7 @@ public class OptionalTClass {
         System.out.println(result1);
         System.out.println(result2);
 
-        Optional.of("456").map(Integer::parseInt).isPresent(x -> System.out.printf("result3=%d%n", x));
+//        Optional.of("456").map(Integer::parseInt).isPresent(x -> System.out.printf("result3=%d%n", x));
         OptionalInt optInt1 = OptionalInt.of(0);
         OptionalInt optInt22 = OptionalInt.empty();
 
