@@ -41,8 +41,13 @@ public class Enum {
 
     public static void main(String[] args) {
         Direction d1 = Direction.EAST;
+        System.out.println(d1);
         Direction d2 = Direction.valueOf("WEST");
+        System.out.println(d2);
+
         Direction d3 = Direction.valueOf("WEST");
+        System.out.println(d3);
+
 //        Direction d3 = Enum.valueof(Direction.class, "EAST"); 없어졌나?!
 
         System.out.println(d1 == d2);
