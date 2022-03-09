@@ -141,6 +141,7 @@ public class CollectClass {
             }
         }
 
+        
         System.out.printf("7. 다중그룹화 + 통계 ( 학년별, 반별 성적 그룹 )%n");
         Map<String, Set<Student.Level>> stuByScoreGroup = Stream.of(stuArr)
                 .collect(groupingBy(s->s.getHak()+"-"+s.getBan(),
