@@ -22,6 +22,9 @@ public class LambdaClass{
 //            }
 //        };
 //        int value = obj.max(3,5); // 함수형 인터페이스가 필요
+//        int value = obj.max(3,5); // 함수형 인터페이스가 필요
+//        int value = obj.max(3,5); // 함수형 인터페이스가 필요
+//        int value = obj.max(3,5); // 함수형 인터페이스가 필요
 
     }
 }
