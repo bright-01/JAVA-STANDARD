@@ -53,6 +53,8 @@ public class TestThreaad {
         test.add("CS02063865_동네변호사-조들호-16-05-24-화---KBS-월화드라마_18_[S181218-200]");
         test.add("CS02063865_동네변호사-조들호-16-05-30-월---KBS-월화드라마_19_[S181218-201]");
         test.add("CS02063865_동네변호사-조들호-16-05-31-화---KBS-월화드라마_20_[S181218-202]");
+        test.add("CS02063865_동네변호사-조들호-16-05-31-화---KBS-월화드라마_20_[S181218-202]");
+        test.add("CS02063865_동네변호사-조들호-16-05-31-화---KBS-월화드라마_20_[S181218-202]");
 
         String yyyyMMdd = new SimpleDateFormat("yyyyMMdd").format(new Date());
         System.out.println("test = " + test);
