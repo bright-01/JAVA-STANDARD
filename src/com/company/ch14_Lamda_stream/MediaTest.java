@@ -73,6 +73,7 @@ public class MediaTest {
         Map<String, Map<String, Object>> statusDetails = (Map<String, Map<String, Object>>) media_id.get("status_details");
         System.out.println("statusDetails = " + statusDetails);
         System.out.println("encodingProfiles = " + encodingProfiles);
+        System.out.println("encodingProfiles = " + encodingProfiles);
 
 
 
