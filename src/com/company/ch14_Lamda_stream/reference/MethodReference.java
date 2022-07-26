@@ -66,6 +66,8 @@ public class MethodReference {
         System.out.println(f2.apply(100).length);
         System.out.println(arr2.length);
         System.out.println(arr2.length);
+        System.out.println(arr2.length);
+        System.out.println(arr2.length);
 
 
     }
