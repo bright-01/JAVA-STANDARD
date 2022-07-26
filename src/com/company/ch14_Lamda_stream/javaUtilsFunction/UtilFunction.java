@@ -37,6 +37,9 @@ public class UtilFunction {
      * UnaryOperator<T>     | T -> T apply(T t) -> T | function의 자손. Function과 달리 매개변수와 결과의 타입이 길다.
      * BinaryOperator<T>    | T, T -> T apply ( T t, T t) -> T |    BiFunction의 자손 BiFunction과 달리 매개변수와 결과의 타입이 같다.
      *
+     *
+     *
+     *
      * */
 
     public static void main(String[] args) {
