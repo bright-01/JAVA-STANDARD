@@ -13,6 +13,8 @@ public class LambdaClass{
      * (a, b) -> { return a>b?a:b;}
      * -->
      * (a,b) -> a>b ? a:b
+     * (a,b) -> a>b ? a:b
+     * (a,b) -> a>b ? a:b
      * */
     public static void main(String[] args) {
 //        Object obj = (a, b) -> a > b ? a: b; // 람다식, 익명객체 아래와 같다.
