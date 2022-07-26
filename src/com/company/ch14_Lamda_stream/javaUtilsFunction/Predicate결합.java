@@ -53,6 +53,9 @@ public class Predicate결합 {
         Predicate<String> p2 = Predicate.isEqual(str1);
         boolean result = p2.test(str2);
         System.out.println(result);
+        System.out.println(result);
+        System.out.println(result);
+        System.out.println(result);
 
 
     }
