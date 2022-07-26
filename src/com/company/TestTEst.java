@@ -29,6 +29,9 @@ public class TestTEst {
 
 
         System.out.println("listMdaIdLocal1 = " + listMdaIdLocal);
+        System.out.println("listMdaIdLocal1 = " + listMdaIdLocal);
+        System.out.println("listMdaIdLocal1 = " + listMdaIdLocal);
+        System.out.println("listMdaIdLocal1 = " + listMdaIdLocal);
 
     }
 }
